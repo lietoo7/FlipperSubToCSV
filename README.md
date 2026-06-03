@@ -1,43 +1,31 @@
-# SubGHz Flipper Zero Converter — V4 Ultimate Pipeline
+# SubGHz Flipper Zero Converter
 
 Ce script Python est un outil de production optimisé permettant de convertir, analyser et visualiser les captures de signaux radio bruts (`.sub`) issues d'un **Flipper Zero**.
-
-Grâce à son architecture **Passe-Unique (Single-Pass Pipeline)** et à l'intégration de l'**algorithme de Welford**, le script traite les fichiers de manière entièrement séquentielle (streaming). Il garantit ainsi une empreinte mémoire RAM constante et minimale (~5 Mo), quelle que soit la taille ou la durée de la capture RF, tout en éliminant les goulots d'étranglement matériels (I/O).
 
 ---
 
 ## Sommaire
 
-* [Caractéristiques & Améliorations (V4)](https://www.google.com/search?q=%23caract%C3%A9ristiques--am%C3%A9liorations-v4)
-* [Installation](https://www.google.com/search?q=%23installation)
-* [Prérequis](https://www.google.com/search?q=%23pr%C3%A9requis)
-* [Déploiement depuis Git](https://www.google.com/search?q=%23d%C3%A9ploiement-depuis-git)
+* [Caractéristiques & Améliorations (V4)]()
+* [Installation]() 
+* [Prérequis]() 
+* [Déploiement depuis Git]() 
 
 
-* [Utilisation du Script](https://www.google.com/search?q=%23utilisation-du-script)
-* [Syntaxe de base](https://www.google.com/search?q=%23syntaxe-de-base)
-* [Options disponibles](https://www.google.com/search?q=%23options-disponibles)
+* [Utilisation du Script]() 
+* [Syntaxe de base]() 
+* [Options disponibles]() 
 
 
-* [Exemples Pratiques](https://www.google.com/search?q=%23exemples-pratiques)
-* [1. Analyse statistique complète d'un signal](https://www.google.com/search?q=%231-analyse-statistique-compl%C3%A8te-dun-signal)
-* [2. Export audio pour exploitation (Audacity, GQRX)](https://www.google.com/search?q=%232-export-audio-pour-exploitation-audacity-gqrx)
-* [3. Export ultra-léger pour Universal Radio Hacker (URH)](https://www.google.com/search?q=%233-export-ultra-l%C3%A9ger-pour-universal-radio-hacker-urh)
-* [4. Traitement total en une seule passe (Optimal)](https://www.google.com/search?q=%234-traitement-total-en-une-seule-passe-optimal)
+* [Exemples Pratiques]()
+* [1. Analyse statistique complète d'un signal]()
+* [2. Export audio pour exploitation (Audacity, GQRX)]()
+* [3. Export léger pour Universal Radio Hacker (URH)]()
+* [4. Traitement total en une seule passe (Optimal)]()
 
 
-
----
-
-## Caractéristiques & Améliorations (V4)
-
-* 🚀 **Pipeline Passe-Unique :** Le fichier source n'est lu **qu'une seule fois**, même si vous générez simultanément les fichiers CSV, WAV et les statistiques. Les gains de vitesse dépassent les 400% sur les gros volumes.
-* 🧠 **RAM Constant < 5 Mo :** Plus aucun tableau ou historique n'est stocké en mémoire vive. Utile pour les architectures embarquées (Raspberry Pi, PinePhone).
-* 📈 **Streaming Statistique :** Calcul en temps réel de la moyenne et de l'écart-type (`stdev`) par méthode de Welford.
-* 🎯 **Haute Fidélité Temporalité :** Correction des alignements de phase et fronts d'ondes carrés pour les logiciels d'analyse de spectre (URH). Accumulateur flottant sur l'audio pour éviter toute dérive temporelle.
 
 ---
-
 ## Installation
 
 ### Prérequis
@@ -167,5 +155,3 @@ Vous souhaitez générer le graphique, extraire le fichier audio, obtenir le CSV
 python3 flipper_sub_converter_v4.py -f telecommande.sub --all --graph-save vue_onde.png
 
 ```
-
-Grâce à la V4, le fichier `telecommande.sub` ne sera ouvert et lu qu'une seule fois. Vous obtiendrez les fichiers `telecommande_transitions.csv`, `telecommande.wav`, `vue_onde.png` ainsi que le rapport textuel instantanément.
