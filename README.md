@@ -1,6 +1,5 @@
 # FlipperSubToCSV
-## Convertit un fichier .sub (Flipper Zero) en CSV compatible URH.
-# Convert.py - Convertisseur Flipper Zero → URH
+#### Convertit un fichier .sub (Flipper Zero) en CSV compatible URH.
 ---
 
 ## Table des matières
