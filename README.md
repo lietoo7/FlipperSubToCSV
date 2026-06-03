@@ -40,7 +40,7 @@ La dépendance suivante est optionnelle et sert uniquement si vous souhaitez gé
 
 1. Clonez le dépôt contenant le script :
 ```bash
-git clone https://github.com/votre-utilisateur/flipper-sub-converter.git
+git clone 
 
 ```
 
